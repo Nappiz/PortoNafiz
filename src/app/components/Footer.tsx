@@ -65,19 +65,19 @@ export default function Footer() {
         </div>
 
         <div className="mt-6 flex flex-wrap justify-center gap-3">
-          <Social href="https://github.com/yourusername" label="GitHub">
+          <Social href="https://github.com/Nappiz" label="GitHub">
             <FaGithub />
           </Social>
-          <Social href="https://www.linkedin.com/in/yourusername" label="LinkedIn">
+          <Social href="https://www.linkedin.com/in/badruzzaman-nafiz-4aa41821b/" label="LinkedIn">
             <FaLinkedin />
           </Social>
-          <Social href="https://x.com/yourusername" label="X (Twitter)">
+          <Social href="https://x.com/nappiz1" label="X (Twitter)">
             <FaXTwitter />
           </Social>
-          <Social href="https://instagram.com/yourusername" label="Instagram">
+          <Social href="https://instagram.com/Nappiz_" label="Instagram">
             <FaInstagram />
           </Social>
-          <Social href="https://wa.me/6281234567890" label="WhatsApp">
+          <Social href="https://wa.me/6281519291757" label="WhatsApp">
             <TbBrandWhatsapp />
           </Social>
         </div>

@@ -59,7 +59,7 @@ export default function About() {
               <div className="rounded-2xl p-[1.5px] bg-gradient-to-br from-indigo-500/70 via-fuchsia-500/70 to-cyan-300/70">
                 <div className="overflow-hidden rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 shadow-[0_20px_60px_-20px_rgba(99,102,241,.35)]">
                   <div className="relative aspect-[4/5]">
-                    <Image src="/foto.png" alt="Foto Nafiz" fill sizes="(max-width: 768px) 20rem, 24rem" priority className="object-cover transition-transform duration-500 hover:scale-[1.01]"/>
+                    <Image src="/foto.jpg" alt="Foto Nafiz" fill sizes="(max-width: 768px) 20rem, 24rem" priority className="object-cover transition-transform duration-500 hover:scale-[1.01]"/>
                   </div>
                 </div>
               </div>
