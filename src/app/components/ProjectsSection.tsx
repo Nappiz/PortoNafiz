@@ -8,51 +8,52 @@ import ProjectCard, { Project } from "./ProjectCard";
 const ALL_PROJECTS: Project[] = [
   {
     id: "p1",
-    title: "--",
-    summary: "lorem impsum dolor sit amet,",
-    image: "/projects/p1.png",
-    tags: ["Next.js", "TypeScript", "Tailwind", "Design"],
-    live: "#", repo: "#", badge: "Featured",
+    title: "IEEE ITS SB",
+    summary: "Led the Web Development subdivision at IEEE ITS Student Branch as a full-stack developer project manager. Responsible for overseeing team workflows, delivering web projects, and collaborating across departments to support organizational needs.",
+    image: "/p11.png",
+    tags: ["Next.js", "TypeScript", "Tailwind"],
+    live: "https://ieee-its-sb.org/", repo: "", badge: "Featured",
   },
   {
     id: "p2",
-    title: "--",
-    summary: "lorem impsum dolor sit amet,",
-    image: "/projects/p2.png",
-    tags: ["Next.js", "Prisma", "PostgreSQL"],
-    live: "#", repo: "#",
+    title: "Antasena ITS Internship",
+    summary: "Contribute to designing and developing websites, covering all stages from UI/UX design to front-end and back-end implementation. This role involves collaborating on user interface design, coding web functionality, and managing server-side operations to deliver complete and responsive web solutionsContribute",
+    image: "/p22.png",
+    tags: ["Laravel", "PHP", "MySQL"],
+    live: "https://antasenaits.com/", repo: "",
   },
   {
     id: "p3",
-    title: "--",
-    summary: "lorem impsum dolor sit amet,",
-    image: "/projects/p3.png",
-    tags: ["Next.js", "AI", "Edge"],
-    live: "#", repo: "#",
+    title: "LearnWAI",
+    summary: "A platform that provides AI tools and resources for learning and development by uploading a single pdf.",
+    image: "/p3.png",
+    tags: ["Next.js", "AI", "FastAPI"],
+    live: "https://learnwaidev.vercel.app/", repo: "",
   },
   {
     id: "p4",
-    title: "--",
-    summary: "lorem impsum dolor sit amet,",
-    image: "/projects/p4.png",
-    tags: ["Next.js", "Stripe", "CMS"],
-    live: "#", repo: "#",
+    title: "Portofolio Website",
+    summary: "A personal portfolio website to showcase my projects, skills, and experience, built with a focus on performance, accessibility, and modern design.",
+    image: "/p4.png",
+    tags: ["Next.js", "Tailwind", "Design"],
+    live: "https://nafiz-dev.vercel.app/", repo: "https://github.com/Nappiz/PortoNafiz",
   },
   {
     id: "p5",
-    title: "--",
-    summary: "lorem impsum dolor sit amet,",
-    image: "/projects/p5.png",
-    tags: ["Tailwind", "Design System"],
-    repo: "#",
+    title: "Lab's Final Project",
+    summary: "A web application made with plain HTML, CSS, and JavaScript that serves as a platform for users to order food online from various restaurants. It only serve the Front-End of the Websites.",
+    image: "/p5.png",
+    tags: ["HTML", "CSS", "JavaScript"],
+    live: "https://nappiz.github.io/FP-LBE-FE/",
+    repo: "https://github.com/Nappiz/FP-LBE-FE", 
   },
   {
     id: "p6",
-    title: "--",
-    summary: "lorem impsum dolor sit amet,",
-    image: "/projects/p6.png",
-    tags: ["FastAPI", "Python", "Docker"],
-    repo: "#",
+    title: "Anniversary Website Template",
+    summary: "A beautiful and elegant anniversary website template to celebrate special occasions, featuring customizable sections for photos, messages, and event details.",
+    image: "/p6.png",
+    tags: ["Next.js", "Tailwind", "Design"],
+    live: "https://annivkeduakita.vercel.app/", repo: "https://github.com/Nappiz/Anniversary2",
   },
 ];
 
@@ -65,11 +66,11 @@ export default function ProjectsSection() {
   const filtered = useMemo(() => {
     switch (filter) {
       case "Web":
-        return ALL_PROJECTS.filter((p) => p.tags.some((t) => ["Next.js", "Stripe", "CMS", "Edge"].includes(t)));
+        return ALL_PROJECTS.filter((p) => p.tags.some((t) => ["Next.js", "Stripe", "CMS", "Laravel"].includes(t)));
       case "AI":
-        return ALL_PROJECTS.filter((p) => p.tags.some((t) => ["Python"].includes(t)));
+        return ALL_PROJECTS.filter((p) => p.tags.some((t) => ["Python", "AI"].includes(t)));
       case "UI":
-        return ALL_PROJECTS.filter((p) => p.tags.some((t) => ["Design", "Design System", "Tailwind"].includes(t)));
+        return ALL_PROJECTS.filter((p) => p.tags.some((t) => ["Design", "HTML", "Tailwind"].includes(t)));
       default:
         return ALL_PROJECTS;
     }

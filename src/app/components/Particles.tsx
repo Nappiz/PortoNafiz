@@ -4,9 +4,9 @@ import { useEffect, useRef } from "react";
 
 type Props = {
   className?: string;
-  density?: number;        // 0.4 – 1.5
-  linkDistance?: number;   // px
-  linkOpacity?: number;    // 0–1
+  density?: number;
+  linkDistance?: number;
+  linkOpacity?: number;
 };
 
 type Particle = { x: number; y: number; vx: number; vy: number; r: number; hue: number };
@@ -24,17 +24,15 @@ export default function Particles({
     const ctx = canvas.getContext("2d")!;
     let raf = 0;
     let particles: Particle[] = [];
-    let width = 0;   // in CSS pixels
-    let height = 0;  // in CSS pixels
+    let width = 0;   
+    let height = 0;  
 
-    // set size to match container / parent element (not window)
     const sizeToContainer = () => {
       const parent = (canvas.parentElement ?? canvas) as HTMLElement;
       const rect = parent.getBoundingClientRect();
       width = Math.max(1, Math.floor(rect.width));
       height = Math.max(1, Math.floor(rect.height));
 
-      // DPR-aware canvas
       const dpr = Math.min(window.devicePixelRatio || 1, 2); // cap to 2 to save perf
       canvas.style.width = `${width}px`;
       canvas.style.height = `${height}px`;

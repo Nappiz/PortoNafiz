@@ -9,20 +9,20 @@ import { FaBriefcase, FaTrophy } from "react-icons/fa6";
 const PER_PAGE = 3;
 
 const EXPERIENCE: ExpItem[] = [
-  { id:"e1", title:"Founder", org:"TC Mudah", period:"2024 – Now", location:"Surabaya", image:"/foto.png", bullets:["Business","Teaching"], tag:"Full-Time" },
-  { id:"e2", title:"Web Dev PM", org:"IEEE ITS SB", period:"2025 – Now", location:"Surabaya", image:"/foto.png", bullets:["Next.js • TS • Tailwind","Managerial"], tag:"Contract" },
-  { id:"e3", title:"Web Dev Intern", org:"Antasena ITS", period:"2024", image:"/foto.png", bullets:["Front-End • Back-End • UI/UX","Teamwork"], tag:"Internship" },
-  { id:"e4", title:"Backend Dev", org:"Flexoo Software House", period:"2023 – Now", image:"/foto.png", bullets:["Backend Development","Teamwork"], tag:"Freelance" },
-  { id:"e5", title:"Lecturer Assistant", org:"ITS", period:"2024", image:"/foto.png", bullets:["Teaching","Fundamental Programming"], tag:"Part-Time" },
-  { id:"e6", title:"CP Problem Setter", org:"Schematics NPC", period:"2024", image:"/foto.png", bullets:["Competitive Programming","Problem Setting"], tag:"Freelance" },
+  { id:"e1", title:"Founder", org:"TC Mudah", period:"2024 – Now", location:"Surabaya", image:"/tcmudah.png", bullets:["Business","Teaching"], tag:"Full-Time" },
+  { id:"e2", title:"Web Dev PM", org:"IEEE ITS SB", period:"2025 – Now", location:"Surabaya", image:"/p1.jpeg", bullets:["Next.js • TS • Tailwind","Managerial"], tag:"Contract" },
+  { id:"e3", title:"Web Dev Intern", org:"Antasena ITS", period:"2024", image:"/p2.jpeg", bullets:["Front-End • Back-End • UI/UX","Teamwork"], tag:"Internship" },
+  { id:"e4", title:"Backend Dev", org:"Flexoo Software House", period:"2023 – Now", image:"/flexo.jpeg", bullets:["Backend Development","Teamwork"], tag:"Freelance" },
+  { id:"e5", title:"Lecturer Assistant", org:"ITS", period:"2024", image:"/alpro.png", bullets:["Teaching","Fundamental Programming"], tag:"Part-Time" },
+  { id:"e6", title:"CP Problem Setter", org:"Schematics NPC", period:"2024", image:"/npc.jpeg", bullets:["Competitive Programming","Problem Setting"], tag:"Freelance" },
 ];
 
 const ACHIEVEMENTS: ExpItem[] = [
-  { id:"a1", title:"Codeforces Expert", org:"CF Rating ~1825", period:"Now", image:"/foto.png", bullets:["Competitive Programming","DSA"], tag:"Competitive" },
-  { id:"a2", title:"1st Place Winner", org:"SECOMP Telkom University", period:"2025", image:"/foto.png", bullets:["Competitive Programming"], tag:"Contest" },
-  { id:"a3", title:"1st Place Winner", org:"CODE 5.0 Amikom", period:"2025", image:"/foto.png", bullets:["Competitive Programming"], tag:"Contest" },
-  { id:"a4", title:"Finalist", org:"Recursion 1.0", period:"2025", image:"/foto.png", bullets:["Competitive Programming"], tag:"Contest" },
-  { id:"a5", title:"BE Dev Training", org:"IEEE ITS SB", period:"2024", image:"/foto.png", bullets:["Back-End","Express.js"], tag:"Training" },
+  { id:"a1", title:"Codeforces", org:"CF Rating ~1802", period:"Now", image:"/cf.png", bullets:["Competitive Programming","DSA"], tag:"Competitive" },
+  { id:"a2", title:"1st Place Winner", org:"SECOMP Telkom University", period:"2025", image:"/secomp.jpeg", bullets:["Competitive Programming"], tag:"Contest" },
+  { id:"a3", title:"1st Place Winner", org:"CODE 5.0 Amikom", period:"2025", image:"/code.jpeg", bullets:["Competitive Programming"], tag:"Contest" },
+  { id:"a4", title:"Finalist", org:"Recursion 1.0", period:"2025", image:"/recursion.png", bullets:["Competitive Programming"], tag:"Contest" },
+  { id:"a5", title:"BE Dev Training", org:"IEEE ITS SB", period:"2024", image:"/be.png", bullets:["Back-End","Express.js"], tag:"Training" },
 ];
 
 export default function ExperienceSection() {
@@ -86,7 +86,7 @@ export default function ExperienceSection() {
               onClick={() => setPage((p) => Math.max(0, p - 1))}
               disabled={!canPrev}
               aria-label="Previous page"
-              className="rounded-xl h-10 w-10 grid place-items-center border border-white/15 glass disabled:opacity-40"
+              className="rounded-xl h-10 w-10 grid place-items-center border border-white/15 glass disabled:opacity-40 cursor-pointer"
             >
               ‹
             </button>
@@ -102,7 +102,7 @@ export default function ExperienceSection() {
               onClick={() => setPage((p) => Math.min(totalPages - 1, p + 1))}
               disabled={!canNext}
               aria-label="Next page"
-              className="rounded-xl h-10 w-10 grid place-items-center border border-white/15 glass disabled:opacity-40"
+              className="rounded-xl h-10 w-10 grid place-items-center border border-white/15 glass disabled:opacity-40 cursor-pointer"
             >
               ›
             </button>
