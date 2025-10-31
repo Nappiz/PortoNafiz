@@ -26,7 +26,7 @@ export default function Hero() {
           </span>
 
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-extrabold leading-tight grad-text">
-            Building reliable websites & AI-ready products
+            Badruzzaman Nafiz
 
           </h1>
 

@@ -90,7 +90,7 @@ export default function Footer() {
               <span className="h-2 w-2 rounded-full bg-cyan-300 shadow-[0_0_12px_4px_rgba(34,211,238,.35)]" />
               Nafiz
             </span>
-            <span>© {year}. Built with Next.js, TS, Tailwind.</span>
+            <span>© {year}. Built with Next.js and Tailwind.</span>
           </div>
 
           <nav className="flex flex-wrap items-center gap-3">
