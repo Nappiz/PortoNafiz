@@ -42,7 +42,7 @@ const ALL_PROJECTS: Project[] = [
     id: "p5",
     title: "Antasena ITS Internship",
     summary: "Contribute to designing and developing websites, covering all stages from UI/UX design to front-end and back-end implementation. This role involves collaborating on user interface design, coding web functionality, and managing server-side operations to deliver complete and responsive web solutionsContribute.",
-    image: "/p2.png",
+    image: "/p22.png",
     tags: ["Laravel", "PHP", "MySQL"],
     live: "https://antasenaits.com",
     badge: "Featured",
