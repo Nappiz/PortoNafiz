@@ -9,15 +9,15 @@ import Footer from "./components/Footer";
 
 export default function Page() {
   return (
-    <>
+    <main className="relative bg-[#030014]">
       <Navbar />
       <Hero />
       <About />
-      <ExperienceSection />
       <SkillsSection />
+      <ExperienceSection />
       <ProjectsSection />
       <WhyHireMeSection />
       <Footer />
-    </>
+    </main>
   );
 }
