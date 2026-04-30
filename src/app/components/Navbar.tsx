@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image"; 
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaBars, FaXmark } from "react-icons/fa6";
 
@@ -52,23 +52,22 @@ export default function Navbar() {
         className={`fixed top-4 left-0 right-0 z-50 flex justify-center px-4`}
       >
         <nav
-          className={`flex items-center justify-between px-6 py-3 rounded-full transition-all duration-500 ${
-            scrolled || mobileOpen
+          className={`flex items-center justify-between px-6 py-3 rounded-full transition-all duration-500 ${scrolled || mobileOpen
               ? "bg-[#030014]/70 border border-white/10 backdrop-blur-xl shadow-lg shadow-indigo-500/10 w-full max-w-4xl"
               : "bg-transparent border border-transparent w-full max-w-6xl"
-          }`}
+            }`}
         >
           <Link href="/" className="relative flex items-center gap-2 group">
             <div className="relative w-8 h-8 flex items-center justify-center">
-                <div className="absolute inset-0 bg-indigo-500 rounded-full blur-md opacity-40 group-hover:opacity-60 transition-opacity" />
-                
-                <Image 
-                    src="/logo.png" 
-                    alt="Nafiz Logo" 
-                    width={32} 
-                    height={32} 
-                    className="object-contain relative z-10"
-                />
+              <div className="absolute inset-0 bg-indigo-500 rounded-full blur-md opacity-40 group-hover:opacity-60 transition-opacity" />
+
+              <Image
+                src="/logo.png"
+                alt="Nafiz Logo"
+                width={32}
+                height={32}
+                className="object-contain relative z-10"
+              />
             </div>
             <span className="hidden sm:block font-bold tracking-tight text-slate-200 group-hover:text-white transition-colors">
               Nafiz.dev
@@ -77,36 +76,37 @@ export default function Navbar() {
 
           <div className="hidden md:flex items-center gap-1">
             {navLinks.map((link, i) => {
-                const isActive = activeSection === link.href.substring(1);
-                return (
-                  <Link
-                    key={i}
-                    href={link.href}
-                    className={`relative px-4 py-2 text-sm font-medium rounded-full transition-all duration-300 ${
-                        isActive 
-                        ? "text-white bg-white/10" 
-                        : "text-slate-400 hover:text-white hover:bg-white/5"
+              const isActive = activeSection === link.href.substring(1);
+              return (
+                <Link
+                  key={i}
+                  href={link.href}
+                  className={`relative px-4 py-2 text-sm font-medium rounded-full transition-all duration-300 ${isActive
+                      ? "text-white bg-white/10"
+                      : "text-slate-400 hover:text-white hover:bg-white/5"
                     }`}
-                  >
-                    {link.name}
-                    {isActive && (
-                        <motion.span 
-                            layoutId="nav-pill"
-                            className="absolute inset-0 rounded-full border border-white/10"
-                            transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
-                        />
-                    )}
-                  </Link>
-                );
-            })}
-            
-            <div className="ml-4 pl-4 border-l border-white/10">
-                <a
-                  href="/resume2.pdf"
-                  className="px-5 py-2 rounded-full bg-gradient-to-r from-indigo-600 to-cyan-500 text-white text-sm font-semibold shadow-lg shadow-indigo-500/20 hover:shadow-indigo-500/40 hover:scale-105 transition-all active:scale-95"
                 >
-                  Resume
-                </a>
+                  {link.name}
+                  {isActive && (
+                    <motion.span
+                      layoutId="nav-pill"
+                      className="absolute inset-0 rounded-full border border-white/10"
+                      transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                    />
+                  )}
+                </Link>
+              );
+            })}
+
+            <div className="ml-4 pl-4 border-l border-white/10">
+              <a
+                href="/resume3.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-5 py-2 rounded-full bg-gradient-to-r from-indigo-600 to-cyan-500 text-white text-sm font-semibold shadow-lg shadow-indigo-500/20 hover:shadow-indigo-500/40 hover:scale-105 transition-all active:scale-95"
+              >
+                Resume
+              </a>
             </div>
           </div>
 
@@ -140,11 +140,13 @@ export default function Navbar() {
                   <span className="opacity-0 group-hover:opacity-100 transition-opacity text-indigo-400">→</span>
                 </Link>
               ))}
-              
+
               <div className="h-px bg-white/10 my-2" />
-              
-              <a 
-                href="/resume2.pdf" 
+
+              <a
+                href="/resume2.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-center py-4 bg-gradient-to-r from-indigo-600 to-cyan-500 rounded-xl font-bold text-white shadow-lg shadow-indigo-500/25 active:scale-95 transition-transform"
               >
                 Download Resume
